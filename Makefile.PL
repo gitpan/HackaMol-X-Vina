@@ -25,7 +25,6 @@ my %WriteMakefileArgs = (
     "Carp" => 0,
     "File::chdir" => "0.1008",
     "HackaMol::X::ExtensionRole" => 0,
-    "Hackamol" => "0.00",
     "Math::Vector::Real" => 0,
     "Modern::Perl" => "1.20",
     "Moose" => 0,
@@ -46,7 +45,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.00_1",
+  "VERSION" => "0.00_2",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -60,7 +59,6 @@ my %FallbackPrereqs = (
   "File::chdir" => "0.1008",
   "HackaMol" => 0,
   "HackaMol::X::ExtensionRole" => 0,
-  "Hackamol" => "0.00",
   "Math::Vector::Real" => 0,
   "Modern::Perl" => "1.20",
   "Moose" => 0,
