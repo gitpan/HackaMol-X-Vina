@@ -4,44 +4,51 @@ HackaMol extension for running Autodock Vina
 
 VERSION
 ========
-developer version 0.00_3 
+developer version 0.00_4 
 Available for testing from cpan.org:
 
-please see *[HackaMol::X::Vina on MetaCPAN](https://metacpan.org/release/DEMIAN/HackaMol-X-Vina-0.00_3) for formatted documentation.
+please see *[HackaMol::X::Vina on MetaCPAN](https://metacpan.org/release/DEMIAN/HackaMol-X-Vina-0.00_4) for formatted documentation.
 
 SYNOPSIS
 ============
-       use HackaMol;
-       use HackaMol::X::Vina;
-       use Math::Vector::Real;
-       
-       my $receptor = "receptor.pdbqt";
-       my $rmol     = HackaMol -> new( hush_read=>1 ) -> read_file_mol( $receptor ); 
-     
-       my @centers = map  {$_ -> xyz}
-                     grep {$_ -> name    eq "OH" }
-                     grep {$_ -> resname eq "TYR"} $rmol -> all_atoms;
-     
-       foreach my $center ( @centers ){
-     
-           my $vina = HackaMol::X::Vina -> new(
-               receptor       => $receptor,
-               ligand         => "ligand.pdbtq",
-               center         => $center,
-               size           => V( 20, 20, 20 ),
-               cpu            => 4,
-               exhaustiveness => 12,
-               exe            => '~/bin/vina',
-               scratch        => 'tmp',
-           );
-    
-           my $mol = $vina->dock_mol(3); # fill mol with 3 binding configurations 
+         use Modern::Perl;
+         use HackaMol;
+         use HackaMol::X::Vina;
+         use Math::Vector::Real;
+         
+         my $receptor = "receptor.pdbqt";
+         my $ligand   = "lig.pdbqt",
+         my $rmol     = HackaMol -> new( hush_read=>1 ) -> read_file_mol( $receptor ); 
+         my $lmol     = HackaMol -> new( hush_read=>1 ) -> read_file_mol( $ligand ); 
+         my $fh = $lmol->print_pdb("lig_out.pdb");
+  
+         my @centers = map  {$_ -> xyz}
+                       grep {$_ -> name    eq "OH" }
+                       grep {$_ -> resname eq "TYR"} $rmol -> all_atoms;
+         
+         foreach my $center ( @centers ){
+         
+             my $vina = HackaMol::X::Vina -> new(
+                 receptor       => $receptor,
+                 ligand         => $ligand,
+                 center         => $center,
+                 size           => V( 20, 20, 20 ),
+                 cpu            => 4,
+                 exhaustiveness => 12,
+                 exe            => '~/bin/vina',
+                 scratch        => 'tmp',
+             );
+         
+             my $mol = $vina->dock_mol(3); # fill mol with 3 binding configurations 
+         
+             printf ("Score: %6.1f\n", $mol->get_score($_) ) foreach (0 .. $mol->tmax);          
 
-           printf ("Score: %6.1f\n", $mol->get_score($_) ) foreach (0 .. $mol->tmax);          
+             $mol->print_pdb_ts([0 .. $mol->tmax], $fh); 
 
-           $mol->print_ts([0 .. $mol->tmax]); 
+           }
 
-       }
+           $_->segid("hgca") foreach $rmol->all_atoms; #for vmd rendering cartoons.. etc
+           $rmol->print_pdb("receptor.pdb");
 
 DESCRIPTION
 ============

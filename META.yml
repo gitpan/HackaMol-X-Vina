@@ -4,20 +4,18 @@ author:
   - 'Demian Riccardi <demianriccardi@gmail.com>'
 build_requires:
   Cwd: 0
-  File::chdir: 0.1008
   Path::Tiny: 0
   Test::Dir: 0
   Test::Fatal: 0
   Test::Moose: 0
   Test::More: 0
   Test::Warn: 0
-  Time::HiRes: 0
   strict: 0
   warnings: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.131560'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -36,4 +34,4 @@ requires:
   MooseX::StrictConstructor: 0
   MooseX::Types::Path::Tiny: 0
   namespace::autoclean: 0
-version: 0.00_3
+version: 0.00_4

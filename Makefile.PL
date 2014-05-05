@@ -36,18 +36,16 @@ my %WriteMakefileArgs = (
   },
   "TEST_REQUIRES" => {
     "Cwd" => 0,
-    "File::chdir" => "0.1008",
     "Path::Tiny" => 0,
     "Test::Dir" => 0,
     "Test::Fatal" => 0,
     "Test::Moose" => 0,
     "Test::More" => 0,
     "Test::Warn" => 0,
-    "Time::HiRes" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.00_3",
+  "VERSION" => "0.00_4",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -73,7 +71,6 @@ my %FallbackPrereqs = (
   "Test::Moose" => 0,
   "Test::More" => 0,
   "Test::Warn" => 0,
-  "Time::HiRes" => 0,
   "namespace::autoclean" => 0,
   "strict" => 0,
   "warnings" => 0

@@ -7,11 +7,8 @@ META.yml
 Makefile.PL
 README
 README.md
-TODO
-conf.txt
 dist.ini
 lib/HackaMol/X/Vina.pm
-lig_out.pdbqt
 t/HackaMol-X-Vina-Basics.t
 t/HackaMol-X-Vina-Mapping.t
 t/lib/lig.pdbqt
