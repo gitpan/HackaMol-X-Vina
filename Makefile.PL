@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "HackaMol extension for running Autodock Vina  ",
+  "ABSTRACT" => "HackaMol extension for running Autodock Vina",
   "AUTHOR" => "Demian Riccardi <demianriccardi\@gmail.com>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
@@ -24,28 +24,30 @@ my %WriteMakefileArgs = (
     "Capture::Tiny" => "0.24",
     "Carp" => 0,
     "File::chdir" => "0.1008",
+    "HackaMol" => 0,
     "HackaMol::X::ExtensionRole" => 0,
     "Math::Vector::Real" => 0,
     "Modern::Perl" => "1.20",
     "Moose" => 0,
     "Moose::Util::TypeConstraints" => 0,
     "MooseX::StrictConstructor" => 0,
+    "MooseX::Types::Path::Tiny" => 0,
     "namespace::autoclean" => 0
   },
   "TEST_REQUIRES" => {
     "Cwd" => 0,
     "File::chdir" => "0.1008",
-    "HackaMol" => 0,
     "Path::Tiny" => 0,
     "Test::Dir" => 0,
     "Test::Fatal" => 0,
     "Test::Moose" => 0,
     "Test::More" => 0,
     "Test::Warn" => 0,
+    "Time::HiRes" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.00_2",
+  "VERSION" => "0.00_3",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -64,12 +66,14 @@ my %FallbackPrereqs = (
   "Moose" => 0,
   "Moose::Util::TypeConstraints" => 0,
   "MooseX::StrictConstructor" => 0,
+  "MooseX::Types::Path::Tiny" => 0,
   "Path::Tiny" => 0,
   "Test::Dir" => 0,
   "Test::Fatal" => 0,
   "Test::Moose" => 0,
   "Test::More" => 0,
   "Test::Warn" => 0,
+  "Time::HiRes" => 0,
   "namespace::autoclean" => 0,
   "strict" => 0,
   "warnings" => 0
