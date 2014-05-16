@@ -8,8 +8,12 @@ Makefile.PL
 README
 README.md
 TODO
-conf.txt
 dist.ini
+examples/ligands_dock.pl
+examples/sample.yaml
+examples/setup_ligands.pl
+examples/setup_ligands_mce.pl
+examples/submit_many.pl
 lib/HackaMol/X/Vina.pm
 t/HackaMol-X-Vina-Basics.t
 t/HackaMol-X-Vina-Mapping.t

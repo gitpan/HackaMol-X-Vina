@@ -1,2 +1,2 @@
-1. investigate use of aliases (MooseX::Aliases) to allow the new call to be as close to the programs docs as 
-possible
+1. add coercion to centers so that it taked either MVRs or array reference
+2. should ligand, receptor be required?  makes it a little annoying in scripts
