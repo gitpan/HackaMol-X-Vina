@@ -3,35 +3,35 @@ abstract: 'HackaMol extension for running Autodock Vina'
 author:
   - 'Demian Riccardi <demianriccardi@gmail.com>'
 build_requires:
-  Cwd: 0
-  Path::Tiny: 0
-  Test::Dir: 0
-  Test::Fatal: 0
-  Test::Moose: 0
-  Test::More: 0
-  Test::Warn: 0
-  strict: 0
-  warnings: 0
+  Cwd: '0'
+  Path::Tiny: '0'
+  Test::Dir: '0'
+  Test::Fatal: '0'
+  Test::Moose: '0'
+  Test::More: '0'
+  Test::Warn: '0'
+  strict: '0'
+  warnings: '0'
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
+  ExtUtils::MakeMaker: '6.30'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: HackaMol-X-Vina
 requires:
-  Capture::Tiny: 0.24
-  Carp: 0
-  File::chdir: 0.1008
-  HackaMol: 0
-  HackaMol::X::ExtensionRole: 0
-  Math::Vector::Real: 0
-  Modern::Perl: 1.20
-  Moose: 0
-  Moose::Util::TypeConstraints: 0
-  MooseX::StrictConstructor: 0
-  MooseX::Types::Path::Tiny: 0
-  namespace::autoclean: 0
-version: 0.00_7
+  Capture::Tiny: '0.24'
+  Carp: '0'
+  File::chdir: '0.1008'
+  HackaMol: '0'
+  HackaMol::X::ExtensionRole: '0'
+  Math::Vector::Real: '0'
+  Modern::Perl: '1.20'
+  Moose: '0'
+  Moose::Util::TypeConstraints: '0'
+  MooseX::StrictConstructor: '0'
+  MooseX::Types::Path::Tiny: '0'
+  namespace::autoclean: '0'
+version: 0.00_8

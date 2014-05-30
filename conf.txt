@@ -1,0 +1,12 @@
+out             = lig_out.pdbqt                                          
+receptor        = /Users/demianriccardi/HackaMol_devel/HackaMol-X-Vina/t/lib/receptor.pdbqt
+ligand          = /Users/demianriccardi/HackaMol_devel/HackaMol-X-Vina/t/lib/lig.pdbqt
+cpu             = 1                                                      
+num_modes       = 2                                                      
+exhaustiveness  = 1                                                      
+center_x        = 6.865                                                  
+center_y        = 3.449                                                  
+center_z        = 85.23                                                  
+size_x          = 10                                                     
+size_y          = 10                                                     
+size_z          = 10                                                     
