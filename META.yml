@@ -25,8 +25,8 @@ requires:
   Capture::Tiny: '0.24'
   Carp: '0'
   File::chdir: '0.1008'
-  HackaMol: '0'
-  HackaMol::X::ExtensionRole: '0'
+  HackaMol: 0.00_20
+  HackaMol::X::ExtensionRole: 0.00_3
   Math::Vector::Real: '0'
   Modern::Perl: '1.20'
   Moose: '0'
@@ -34,4 +34,4 @@ requires:
   MooseX::StrictConstructor: '0'
   MooseX::Types::Path::Tiny: '0'
   namespace::autoclean: '0'
-version: 0.00_8
+version: 0.00_9

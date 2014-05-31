@@ -188,7 +188,7 @@ HackaMol::X::Vina - HackaMol extension for running Autodock Vina
 
 =head1 VERSION
 
-version 0.00_8
+version 0.00_9
 
 =head1 SYNOPSIS
 
